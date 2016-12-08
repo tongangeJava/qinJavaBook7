@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="qinJavaBook7:war exploded">
+    <output-path>$PROJECT_DIR$/../../out/javaee7book/war</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="qinJavaBook7/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="qinJavaBook7" />
+          <element id="module-output" name="goods-controller" />
+          <element id="module-output" name="goods-dao" />
+          <element id="module-output" name="goods-domain" />
+          <element id="module-output" name="goods-service" />
+          <element id="module-output" name="java7-review" />
+          <element id="module-output" name="javaee7-goodsProject" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="libs" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

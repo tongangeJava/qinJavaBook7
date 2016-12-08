@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/javaee7-goodsProject/goods-controller/goods-controller.iml" filepath="$PROJECT_DIR$/javaee7-goodsProject/goods-controller/goods-controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaee7-goodsProject/goods-dao/goods-dao.iml" filepath="$PROJECT_DIR$/javaee7-goodsProject/goods-dao/goods-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaee7-goodsProject/goods-domain/goods-domain.iml" filepath="$PROJECT_DIR$/javaee7-goodsProject/goods-domain/goods-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaee7-goodsProject/goods-service/goods-service.iml" filepath="$PROJECT_DIR$/javaee7-goodsProject/goods-service/goods-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java7-review/java7-review.iml" filepath="$PROJECT_DIR$/java7-review/java7-review.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaee7-goodsProject/javaee7-goodsProject.iml" filepath="$PROJECT_DIR$/javaee7-goodsProject/javaee7-goodsProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qinJavaBook7.iml" filepath="$PROJECT_DIR$/qinJavaBook7.iml" />
+    </modules>
+  </component>
+</project>
