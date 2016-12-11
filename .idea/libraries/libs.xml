@@ -76,6 +76,7 @@
       <root url="jar://$PROJECT_DIR$/../../export/JavaEE7Tools.10.Final-source.jar!/hibernate-service/src/main" />
       <root url="jar://$PROJECT_DIR$/../../export/JavaEE7Tools.10.Final-source.jar!/javaee7-core/src/main" />
       <root url="jar://$PROJECT_DIR$/../../export/JavaEE7Tools.10.Final-source.jar!/src/test" />
+      <root url="jar://E:/software/java_jars/Jar/spring/spring-orm-4.1.6.RELEASE-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

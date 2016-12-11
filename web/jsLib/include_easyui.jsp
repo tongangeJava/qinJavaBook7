@@ -10,3 +10,10 @@
     <link rel="stylesheet" href="<c:url value="/jsLib/color.css"/> ">
     <link rel="stylesheet" href="<c:url value="/jsLib/icon.css"/> ">
 </head>
+
+<style type="text/css">
+    #_body
+    {
+        font-family: 微软雅黑;
+    }
+</style>

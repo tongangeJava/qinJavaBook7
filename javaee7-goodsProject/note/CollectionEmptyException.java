@@ -12,17 +12,20 @@ CollectionEmptyException:
 	
 */
 
-class DAOImpl {
-	
-	void doLogin(User user) {
-		//没有查询成功
-		if (list.size() == 0) {
-			throw new CollectionEmptyException();
-		}
-	}
-	
-	
+class DAOImpl
+{
+
+    void doLogin(User user)
+    {
+        //没有查询成功
+        if (list.size() == 0)
+        {
+            throw new CollectionEmptyException();
+        }
+    }
+
+
 }
-	
+
 
 

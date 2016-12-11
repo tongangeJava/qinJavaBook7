@@ -11,36 +11,45 @@ ClassNotCastException:
 	例如
 	
 */
-	
-	/** 没有实现Serializable */
-	class Person {
-		
-	}
-	
-	@Repository
-	class DAOImpl implements DAO {
-		//注入SessionFactory
-		
-		void operator() throws ClassNotCastException {
-			//此时此类并不是Serializable接口的子类
-			if (! DAOImpl instanceOf Serializable) {
-				throw new ClassNotCastException();
-			} else {
-				//do operator
-			}
-		}
-	}
-	
-	/** 实现后就不会报异常, 所以在写代码时应将代码写成如下结构:*/
-	class Person2 implements SuperEntity<Integer> {
-		//integer 主键 get/set
-		
-		
-	}
-	
-	class PersonDAOImpl implements PersonDAO {
-		SessionFactory sessionFactory;
-	}
-	
+
+/**
+ * 没有实现Serializable
+ */
+class Person
+{
+
+}
+
+@Repository
+class DAOImpl implements DAO
+{
+    //注入SessionFactory
+
+    void operator() throws ClassNotCastException
+    {
+        //此时此类并不是Serializable接口的子类
+        if (!DAOImpl instanceOf Serializable){
+        throw new ClassNotCastException();
+    }else{
+        //do operator
+    }
+    }
+}
+
+/**
+ * 实现后就不会报异常, 所以在写代码时应将代码写成如下结构:
+ */
+class Person2 implements SuperEntity<Integer>
+{
+    //integer 主键 get/set
+
+
+}
+
+class PersonDAOImpl implements PersonDAO
+{
+    SessionFactory sessionFactory;
+}
+
 
 

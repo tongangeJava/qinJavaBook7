@@ -10,6 +10,8 @@
         <mapping class="qin.goods7.domain.Book"></mapping>
         <mapping class="qin.goods7.domain.User"></mapping>
         <mapping class="qin.goods7.domain.UserCountry"></mapping>
+        <mapping class="qin.goods7.domain.Goods"/>
+        <mapping class="qin.goods7.domain.GoodsType"/>
 
     </session-factory>
 

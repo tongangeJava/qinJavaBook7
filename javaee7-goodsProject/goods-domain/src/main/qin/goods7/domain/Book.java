@@ -11,7 +11,8 @@ public class Book implements SuperEntity7<Short>
 {
     private Short id;
 
-    @Id@GeneratedValue
+    @Id
+    @GeneratedValue
     @Override
     public Short getId()
     {

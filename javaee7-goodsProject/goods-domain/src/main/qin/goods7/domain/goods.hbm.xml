@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="qin.goods7.domain" auto-import="true" default-lazy="false">
+
+    <!-- 商品类 -->
+    <class name="Goods" table="qin_goods7">
+        <id name="id" column="goods_id">
+            <generator class="increment"/>
+        </id>
+
+        <property name="goodsName" column="goods_name" length="100" not-null="true"/>
+        <property name="goodsDetails" column="goods_details" length="20000" not-null="true"/>
+        <property name="goodsAmount" column="goods_amount" not-null="true"/>
+        <property name="goodsPrice" column="goods_price" not-null="true"/>
+        <property name="goodsAddDate" column="goods_addDate" type="java.util.Date"></property>
+
+        <!-- 分类 -->
+        <join table="qin_join_goods_type">
+            <key column="key_goods_type_id1" foreign-key="fk_goods_type_id1"></key>
+            <many-to-one name="goodsType" foreign-key="fk_goods_type_id2" column="col_goods_type_id" cascade="delete"/>
+        </join>
+
+    </class>
+
+    <!-- 商品类型类 -->
+    <class name="GoodsType" table="qin_goodsType7">
+        <id name="id" column="goodsType_id">
+            <generator class="increment"/>
+        </id>
+
+        <property name="goodsTypeId" column="goods_type_id" type="java.lang.Long"></property>
+        <property name="goodsTypeName" column="goods_type_name"></property>
+
+        <!-- 与商品关联 -->
+        <set name="goodsTypeSet" table="qin_goodsTypeSet" cascade="delete">
+            <key column="key_goods_type_setId1" foreign-key="fk_goods_type_setId1"></key>
+            <one-to-many class="Goods"/>
+        </set>
+
+        <!-- 下级分类 -->
+        <set name="goodsType_childrenSet" table="qin_goodsTypeChildrenSet" cascade="delete">
+            <key column="key_goods_children_setId1" foreign-key="fk_goods_children_setId1"></key>
+            <one-to-many class="GoodsType"/>
+        </set>
+
+        <join table="qin_join_goodsCountry">
+            <key column="key_goods_countryId1" foreign-key="fk_goods_countryId1"></key>
+            <many-to-one name="goodsTypeParent" foreign-key="fk_goods_countryId2" column="key_goods_countryId2"/>
+        </join>
+    </class>
+
+</hibernate-mapping>

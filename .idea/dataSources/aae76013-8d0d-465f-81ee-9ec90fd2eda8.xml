@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="mysql">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="java7book">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="destoon"/>
+    <schema id="4" parent="1" name="destoon1"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="javaee8"/>
+    <schema id="7" parent="1" name="mem_mgr"/>
+    <schema id="8" parent="1" name="mysql"/>
+    <schema id="9" parent="1" name="performance_schema"/>
+    <schema id="10" parent="1" name="sakila"/>
+    <schema id="11" parent="1" name="sys"/>
+    <schema id="12" parent="1" name="wordpress"/>
+    <schema id="13" parent="1" name="world"/>
+    <table id="14" parent="2" name="book"/>
+    <table id="15" parent="2" name="goodstype_childrenset7"/>
+    <table id="16" parent="2" name="goodstype_goodsset7"/>
+    <table id="17" parent="2" name="qin_goods7"/>
+    <table id="18" parent="2" name="qin_goodstype7"/>
+    <table id="19" parent="2" name="qin_user7"/>
+    <table id="20" parent="2" name="qin_user_join_country7"/>
+    <table id="21" parent="2" name="qin_usercountry7"/>
+    <table id="22" parent="2" name="qin_usercountry_children_set7"/>
+    <table id="23" parent="2" name="qin_usercountry_parent7"/>
+    <table id="24" parent="2" name="qin_usercountry_user_set7"/>
+    <column id="25" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>smallint(6)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <key id="26" parent="14" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="27" parent="15" name="joinColumn_children">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="15" name="goodsType_childrenSet_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="29" parent="15" name="UK_a3wwe9vgjto2kxkb60o2jfe7w">
+      <ColNames>goodsType_childrenSet_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="30" parent="15" name="PRIMARY">
+      <ColNames>joinColumn_children
+goodsType_childrenSet_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="31" parent="15" name="UK_a3wwe9vgjto2kxkb60o2jfe7w">
+      <ColNames>goodsType_childrenSet_id</ColNames>
+      <UnderlyingIndexName>UK_a3wwe9vgjto2kxkb60o2jfe7w</UnderlyingIndexName>
+    </key>
+    <foreign-key id="32" parent="15" name="FK_r75cyd6qkj3lki1kkcj9vj9eq">
+      <ColNames>joinColumn_children</ColNames>
+      <RefSchemaName>java7book</RefSchemaName>
+      <RefTableName>qin_goodstype7</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="33" parent="15" name="FK_a3wwe9vgjto2kxkb60o2jfe7w">
+      <ColNames>goodsType_childrenSet_id</ColNames>
+      <RefSchemaName>java7book</RefSchemaName>
+      <RefTableName>qin_goodstype7</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="34" parent="16" name="joinColumn_goodsSet">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="16" name="goodsTypeSet_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="36" parent="16" name="UK_llhrvrd7lo6seer6c9hkx8tkq">
+      <ColNames>goodsTypeSet_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="37" parent="16" name="PRIMARY">
+      <ColNames>joinColumn_goodsSet
+goodsTypeSet_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="38" parent="16" name="UK_llhrvrd7lo6seer6c9hkx8tkq">
+      <ColNames>goodsTypeSet_id</ColNames>
+      <UnderlyingIndexName>UK_llhrvrd7lo6seer6c9hkx8tkq</UnderlyingIndexName>
+    </key>
+    <foreign-key id="39" parent="16" name="FK_atoyjvbak67e1in9dxbugw5mt">
+      <ColNames>joinColumn_goodsSet</ColNames>
+      <RefSchemaName>java7book</RefSchemaName>
+      <RefTableName>qin_goodstype7</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="40" parent="16" name="FK_llhrvrd7lo6seer6c9hkx8tkq">
+      <ColNames>goodsTypeSet_id</ColNames>
+      <RefSchemaName>java7book</RefSchemaName>
+      <RefTableName>qin_goods7</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="41" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="42" parent="17" name="goodsAddDate">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="43" parent="17" name="goodsAmount">
+      <Position>3</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="44" parent="17" name="goodsDetails">
+      <Position>4</Position>
+      <DataType>varchar(20000)|0</DataType>
+    </column>
+    <column id="45" parent="17" name="goodsName">
+      <Position>5</Position>
+      <DataType>varchar(300)|0</DataType>
+    </column>
+    <column id="46" parent="17" name="goodsPrice">
+      <Position>6</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="47" parent="17" name="joinColumn_goods_goodsType">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="48" parent="17" name="fk_goods_goodsType">
+      <ColNames>joinColumn_goods_goodsType</ColNames>
+    </index>
+    <key id="49" parent="17" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="50" parent="17" name="fk_goods_goodsType">
+      <ColNames>joinColumn_goods_goodsType</ColNames>
+      <RefSchemaName>java7book</RefSchemaName>
+      <RefTableName>qin_goodstype7</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="51" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="52" parent="18" name="goodsTypeId">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="53" parent="18" name="goodsTypeName">
+      <Position>3</Position>
+      <DataType>varchar(400)|0</DataType>
+    </column>
+    <column id="54" parent="18" name="joinColumn_parent">
+      <Position>4</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="55" parent="18" name="fk_parent">
+      <ColNames>joinColumn_parent</ColNames>
+    </index>
+    <index id="56" parent="18" name="UK_lwadf2kp73uj67d0pff8i1hgo">
+      <ColNames>goodsTypeName</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="57" parent="18" name="UK_nxwlsiax58m56iv05uu37dvw4">
+      <ColNames>goodsTypeId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="58" parent="18" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="59" parent="18" name="UK_nxwlsiax58m56iv05uu37dvw4">
+      <ColNames>goodsTypeId</ColNames>
+      <UnderlyingIndexName>UK_nxwlsiax58m56iv05uu37dvw4</UnderlyingIndexName>
+    </key>
+    <key id="60" parent="18" name="UK_lwadf2kp73uj67d0pff8i1hgo">
+      <ColNames>goodsTypeName</ColNames>
+      <UnderlyingIndexName>UK_lwadf2kp73uj67d0pff8i1hgo</UnderlyingIndexName>
+    </key>
+    <foreign-key id="61" parent="18" name="fk_parent">
+      <ColNames>joinColumn_parent</ColNames>
+      <RefSchemaName>java7book</RefSchemaName>
+      <RefTableName>qin_goodstype7</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="62" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="63" parent="19" name="birthdate">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="64" parent="19" name="user_email">
+      <Position>3</Position>
+      <DataType>varchar(60)|0</DataType>
+    </column>
+    <column id="65" parent="19" name="user_firstName">
+      <Position>4</Position>
+      <DataType>varchar(6)|0</DataType>
+    </column>
+    <column id="66" parent="19" name="user_gender">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="67" parent="19" name="user_lastName">
+      <Position>6</Position>
+      <DataType>varchar(16)|0</DataType>
+    </column>
+    <column id="68" parent="19" name="user_loginName">
+      <Position>7</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="69" parent="19" name="user_nation">
+      <Position>8</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="70" parent="19" name="user_password">
+      <Position>9</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="71" parent="19" name="user_phone">
+      <Position>10</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="72" parent="19" name="user_realName">
+      <Position>11</Position>
+      <DataType>varchar(9)|0</DataType>
+    </column>
+    <column id="73" parent="19" name="user_myName">
+      <Position>12</Position>
+      <DataType>varchar(60)|0</DataType>
+    </column>
+    <key id="74" parent="19" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="75" parent="20" name="userCountry_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="76" parent="20" name="id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="77" parent="20" name="FK_dw4ng9tmns72cc5d3ahmm29fx">
+      <ColNames>userCountry_id</ColNames>
+    </index>
+    <key id="78" parent="20" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="79" parent="20" name="FK_dw4ng9tmns72cc5d3ahmm29fx">
+      <ColNames>userCountry_id</ColNames>
+      <RefSchemaName>java7book</RefSchemaName>
+      <RefTableName>qin_usercountry7</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="80" parent="20" name="FK_4a3o4n3yfohxdoyh7vd8sn1tl">
+      <ColNames>id</ColNames>
+      <RefSchemaName>java7book</RefSchemaName>
+      <RefTableName>qin_user7</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="81" parent="21" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="82" parent="21" name="country_name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="83" parent="21" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="84" parent="22" name="qin_userCountry7_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="85" parent="22" name="childrenSet_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="86" parent="22" name="UK_tbju1xdh77a0tqay37vkd3cu1">
+      <ColNames>childrenSet_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="87" parent="22" name="PRIMARY">
+      <ColNames>qin_userCountry7_id
+childrenSet_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="88" parent="22" name="UK_tbju1xdh77a0tqay37vkd3cu1">
+      <ColNames>childrenSet_id</ColNames>
+      <UnderlyingIndexName>UK_tbju1xdh77a0tqay37vkd3cu1</UnderlyingIndexName>
+    </key>
+    <foreign-key id="89" parent="22" name="FK_1r28ww00k89v80g2j7hqtcrng">
+      <ColNames>qin_userCountry7_id</ColNames>
+      <RefSchemaName>java7book</RefSchemaName>
+      <RefTableName>qin_usercountry7</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="90" parent="22" name="FK_tbju1xdh77a0tqay37vkd3cu1">
+      <ColNames>childrenSet_id</ColNames>
+      <RefSchemaName>java7book</RefSchemaName>
+      <RefTableName>qin_usercountry7</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="91" parent="23" name="col_parent_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="92" parent="23" name="id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="93" parent="23" name="fk_parent_id">
+      <ColNames>col_parent_id</ColNames>
+    </index>
+    <key id="94" parent="23" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="95" parent="23" name="fk_parent_id">
+      <ColNames>col_parent_id</ColNames>
+      <RefSchemaName>java7book</RefSchemaName>
+      <RefTableName>qin_usercountry7</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="96" parent="23" name="FK_1i20ap5uyw3489ul5x4yx2r6m">
+      <ColNames>id</ColNames>
+      <RefSchemaName>java7book</RefSchemaName>
+      <RefTableName>qin_usercountry7</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="97" parent="24" name="qin_userCountry7_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="98" parent="24" name="userSet_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="99" parent="24" name="UK_92hcobx336gs2smc4huwogoyh">
+      <ColNames>userSet_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="100" parent="24" name="PRIMARY">
+      <ColNames>qin_userCountry7_id
+userSet_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="101" parent="24" name="UK_92hcobx336gs2smc4huwogoyh">
+      <ColNames>userSet_id</ColNames>
+      <UnderlyingIndexName>UK_92hcobx336gs2smc4huwogoyh</UnderlyingIndexName>
+    </key>
+    <foreign-key id="102" parent="24" name="FK_eui59i1ivslwgmh2shqhsn5nh">
+      <ColNames>qin_userCountry7_id</ColNames>
+      <RefSchemaName>java7book</RefSchemaName>
+      <RefTableName>qin_usercountry7</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="103" parent="24" name="FK_92hcobx336gs2smc4huwogoyh">
+      <ColNames>userSet_id</ColNames>
+      <RefSchemaName>java7book</RefSchemaName>
+      <RefTableName>qin_user7</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
