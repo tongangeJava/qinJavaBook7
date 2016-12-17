@@ -12,34 +12,34 @@
         {
             $('#myModal').modal
             (
-                    {
-                        show: true
-                    }
+                {
+                    show: true
+                }
             );
             return;
         }
         else
         {
             var url = "/member/loginUser.com?loginName=" + loginName +
-                    "        &&password=" + password;
+                "        &&password=" + password;
 
             $.ajax
             (
+                {
+                    url: url,
+                    method: 'POST',
+                    success: function (msg)
                     {
-                        url: url,
-                        method: 'POST',
-                        success: function (msg)
+                        if (msg == "success")
                         {
-                            if (msg == "success")
-                            {
-                                alert("登录成功");
-                            }
-                            else
-                            {
-                                alert("登录失败");
-                            }
+                            alert("登录成功");
+                        }
+                        else
+                        {
+                            alert("登录失败");
                         }
                     }
+                }
             );
         }
     }

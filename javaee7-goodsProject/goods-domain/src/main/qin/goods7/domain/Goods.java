@@ -164,4 +164,19 @@ public class Goods implements SuperEntity7<Long>
     }
     //endregion
 
+    //region 级别
+    private Integer goodsLevelId;
+
+    @Column
+    public Integer getGoodsLevelId()
+    {
+        return goodsLevelId;
+    }
+
+    public void setGoodsLevelId(Integer goodsLevelId)
+    {
+        this.goodsLevelId = goodsLevelId;
+    }
+    //endregion
+
 }

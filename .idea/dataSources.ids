@@ -117,234 +117,238 @@ goodsTypeSet_id</columns>
       <column id="35" parent="5" name="joinColumn_goods_goodsType">
         <data-type>bigint(20)</data-type>
       </column>
-      <index id="36" parent="5" name="fk_goods_goodsType">
+      <column id="36" parent="5" name="goodsLevelId">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;-1&apos;</default-expression>
+      </column>
+      <index id="37" parent="5" name="fk_goods_goodsType">
         <columns>joinColumn_goods_goodsType</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="37" parent="5" name="PRIMARY">
+      <key id="38" parent="5" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="38" parent="5" name="fk_goods_goodsType">
+      <foreign-key id="39" parent="5" name="fk_goods_goodsType">
         <columns>joinColumn_goods_goodsType</columns>
         <ref-key>~.qin_goodstype7.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="39" parent="6" name="id">
+      <column id="40" parent="6" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="40" parent="6" name="goodsTypeId">
+      <column id="41" parent="6" name="goodsTypeId">
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="41" parent="6" name="goodsTypeName">
+      <column id="42" parent="6" name="goodsTypeName">
         <data-type>varchar(400)</data-type>
       </column>
-      <column id="42" parent="6" name="joinColumn_parent">
+      <column id="43" parent="6" name="joinColumn_parent">
         <data-type>bigint(20)</data-type>
       </column>
-      <index id="43" parent="6" name="fk_parent">
+      <index id="44" parent="6" name="fk_parent">
         <columns>joinColumn_parent</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="44" parent="6" name="UK_lwadf2kp73uj67d0pff8i1hgo">
+      <index id="45" parent="6" name="UK_lwadf2kp73uj67d0pff8i1hgo">
         <columns>goodsTypeName</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="45" parent="6" name="UK_nxwlsiax58m56iv05uu37dvw4">
+      <index id="46" parent="6" name="UK_nxwlsiax58m56iv05uu37dvw4">
         <columns>goodsTypeId</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="46" parent="6" name="PRIMARY">
+      <key id="47" parent="6" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <key id="47" parent="6" name="UK_lwadf2kp73uj67d0pff8i1hgo">
+      <key id="48" parent="6" name="UK_lwadf2kp73uj67d0pff8i1hgo">
         <columns>goodsTypeName</columns>
         <underlying-index>UK_lwadf2kp73uj67d0pff8i1hgo</underlying-index>
       </key>
-      <key id="48" parent="6" name="UK_nxwlsiax58m56iv05uu37dvw4">
+      <key id="49" parent="6" name="UK_nxwlsiax58m56iv05uu37dvw4">
         <columns>goodsTypeId</columns>
         <underlying-index>UK_nxwlsiax58m56iv05uu37dvw4</underlying-index>
       </key>
-      <foreign-key id="49" parent="6" name="fk_parent">
+      <foreign-key id="50" parent="6" name="fk_parent">
         <columns>joinColumn_parent</columns>
         <ref-key>PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="50" parent="7" name="id">
+      <column id="51" parent="7" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="51" parent="7" name="birthdate">
+      <column id="52" parent="7" name="birthdate">
         <data-type>date</data-type>
       </column>
-      <column id="52" parent="7" name="user_email">
+      <column id="53" parent="7" name="user_email">
         <data-type>varchar(60)</data-type>
       </column>
-      <column id="53" parent="7" name="user_firstName">
+      <column id="54" parent="7" name="user_firstName">
         <data-type>varchar(6)</data-type>
       </column>
-      <column id="54" parent="7" name="user_gender">
+      <column id="55" parent="7" name="user_gender">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="55" parent="7" name="user_lastName">
+      <column id="56" parent="7" name="user_lastName">
         <data-type>varchar(16)</data-type>
       </column>
-      <column id="56" parent="7" name="user_loginName">
+      <column id="57" parent="7" name="user_loginName">
         <data-type>varchar(30)</data-type>
       </column>
-      <column id="57" parent="7" name="user_nation">
+      <column id="58" parent="7" name="user_nation">
         <data-type>varchar(5)</data-type>
       </column>
-      <column id="58" parent="7" name="user_password">
+      <column id="59" parent="7" name="user_password">
         <data-type>varchar(30)</data-type>
       </column>
-      <column id="59" parent="7" name="user_phone">
+      <column id="60" parent="7" name="user_phone">
         <data-type>varchar(30)</data-type>
       </column>
-      <column id="60" parent="7" name="user_realName">
+      <column id="61" parent="7" name="user_realName">
         <data-type>varchar(9)</data-type>
       </column>
-      <column id="61" parent="7" name="user_myName">
+      <column id="62" parent="7" name="user_myName">
         <data-type>varchar(60)</data-type>
       </column>
-      <key id="62" parent="7" name="PRIMARY">
+      <key id="63" parent="7" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="63" parent="8" name="userCountry_id">
+      <column id="64" parent="8" name="userCountry_id">
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="64" parent="8" name="id">
+      <column id="65" parent="8" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <index id="65" parent="8" name="FK_dw4ng9tmns72cc5d3ahmm29fx">
+      <index id="66" parent="8" name="FK_dw4ng9tmns72cc5d3ahmm29fx">
         <columns>userCountry_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="66" parent="8" name="PRIMARY">
+      <key id="67" parent="8" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="67" parent="8" name="FK_4a3o4n3yfohxdoyh7vd8sn1tl">
+      <foreign-key id="68" parent="8" name="FK_4a3o4n3yfohxdoyh7vd8sn1tl">
         <columns>id</columns>
         <ref-key>~.qin_user7.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="68" parent="8" name="FK_dw4ng9tmns72cc5d3ahmm29fx">
+      <foreign-key id="69" parent="8" name="FK_dw4ng9tmns72cc5d3ahmm29fx">
         <columns>userCountry_id</columns>
         <ref-key>~.qin_usercountry7.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="69" parent="9" name="id">
+      <column id="70" parent="9" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="70" parent="9" name="country_name">
+      <column id="71" parent="9" name="country_name">
         <data-type>varchar(255)</data-type>
       </column>
-      <key id="71" parent="9" name="PRIMARY">
+      <key id="72" parent="9" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="72" parent="10" name="qin_userCountry7_id">
+      <column id="73" parent="10" name="qin_userCountry7_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="73" parent="10" name="childrenSet_id">
+      <column id="74" parent="10" name="childrenSet_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <index id="74" parent="10" name="UK_tbju1xdh77a0tqay37vkd3cu1">
+      <index id="75" parent="10" name="UK_tbju1xdh77a0tqay37vkd3cu1">
         <columns>childrenSet_id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="75" parent="10" name="PRIMARY">
+      <key id="76" parent="10" name="PRIMARY">
         <columns>qin_userCountry7_id
 childrenSet_id</columns>
         <primary>1</primary>
       </key>
-      <key id="76" parent="10" name="UK_tbju1xdh77a0tqay37vkd3cu1">
+      <key id="77" parent="10" name="UK_tbju1xdh77a0tqay37vkd3cu1">
         <columns>childrenSet_id</columns>
         <underlying-index>UK_tbju1xdh77a0tqay37vkd3cu1</underlying-index>
       </key>
-      <foreign-key id="77" parent="10" name="FK_1r28ww00k89v80g2j7hqtcrng">
+      <foreign-key id="78" parent="10" name="FK_1r28ww00k89v80g2j7hqtcrng">
         <columns>qin_userCountry7_id</columns>
         <ref-key>~.qin_usercountry7.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="78" parent="10" name="FK_tbju1xdh77a0tqay37vkd3cu1">
+      <foreign-key id="79" parent="10" name="FK_tbju1xdh77a0tqay37vkd3cu1">
         <columns>childrenSet_id</columns>
         <ref-key>~.qin_usercountry7.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="79" parent="11" name="col_parent_id">
+      <column id="80" parent="11" name="col_parent_id">
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="80" parent="11" name="id">
+      <column id="81" parent="11" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <index id="81" parent="11" name="fk_parent_id">
+      <index id="82" parent="11" name="fk_parent_id">
         <columns>col_parent_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="82" parent="11" name="PRIMARY">
+      <key id="83" parent="11" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="83" parent="11" name="FK_1i20ap5uyw3489ul5x4yx2r6m">
+      <foreign-key id="84" parent="11" name="FK_1i20ap5uyw3489ul5x4yx2r6m">
         <columns>id</columns>
         <ref-key>~.qin_usercountry7.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="84" parent="11" name="fk_parent_id">
+      <foreign-key id="85" parent="11" name="fk_parent_id">
         <columns>col_parent_id</columns>
         <ref-key>~.qin_usercountry7.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="85" parent="12" name="qin_userCountry7_id">
+      <column id="86" parent="12" name="qin_userCountry7_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="86" parent="12" name="userSet_id">
+      <column id="87" parent="12" name="userSet_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <index id="87" parent="12" name="UK_92hcobx336gs2smc4huwogoyh">
+      <index id="88" parent="12" name="UK_92hcobx336gs2smc4huwogoyh">
         <columns>userSet_id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="88" parent="12" name="PRIMARY">
+      <key id="89" parent="12" name="PRIMARY">
         <columns>qin_userCountry7_id
 userSet_id</columns>
         <primary>1</primary>
       </key>
-      <key id="89" parent="12" name="UK_92hcobx336gs2smc4huwogoyh">
+      <key id="90" parent="12" name="UK_92hcobx336gs2smc4huwogoyh">
         <columns>userSet_id</columns>
         <underlying-index>UK_92hcobx336gs2smc4huwogoyh</underlying-index>
       </key>
-      <foreign-key id="90" parent="12" name="FK_92hcobx336gs2smc4huwogoyh">
+      <foreign-key id="91" parent="12" name="FK_92hcobx336gs2smc4huwogoyh">
         <columns>userSet_id</columns>
         <ref-key>~.qin_user7.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="91" parent="12" name="FK_eui59i1ivslwgmh2shqhsn5nh">
+      <foreign-key id="92" parent="12" name="FK_eui59i1ivslwgmh2shqhsn5nh">
         <columns>qin_userCountry7_id</columns>
         <ref-key>~.qin_usercountry7.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>

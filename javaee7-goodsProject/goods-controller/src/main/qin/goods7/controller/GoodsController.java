@@ -40,11 +40,61 @@ public class GoodsController extends JavaEE7BaseController
     }
     //endregion
 
-    //region 新增页面
-    @RequestMapping(value = "/returnAdd")
-    public ModelAndView returnAdd()
+    //region bootstrap-index
+    @RequestMapping(value = "/bootstrapIndex")
+    public ModelAndView bootstrapIndex()
     {
-        return new ModelAndView("/goods/returnAdd");
+        return new ModelAndView("/goods/bootstrapIndex");
     }
     //endregion
+
+    //region list
+
+    /**
+     * 列表页面
+     */
+    @RequestMapping(value = "/list")
+    public ModelAndView list()
+    {
+        return new ModelAndView("/goods/list");
+    }
+    //endregion
+
+    //region add
+
+    /**
+     * 新增页面
+     */
+    @RequestMapping(value = "/add")
+    public ModelAndView add()
+    {
+        return new ModelAndView("/goods/add");
+    }
+    //endregion
+
+    //region type
+
+    /**
+     * 类型页面
+     */
+    @RequestMapping(value = "/type")
+    public ModelAndView type()
+    {
+        return new ModelAndView("/goods/type");
+    }
+    //endregion
+
+    //region ini
+
+    /**
+     * 初始化数据页面
+     */
+    @RequestMapping(value = "/ini")
+    public ModelAndView ini()
+    {
+        return new ModelAndView("/goods/ini");
+    }
+    //endregion
+
+
 }

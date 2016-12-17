@@ -1461,9 +1461,9 @@
         {
             var el = this.$element[0]
             return $.extend({}, (typeof el.getBoundingClientRect == 'function') ? el.getBoundingClientRect() : {
-                width: el.offsetWidth
-                , height: el.offsetHeight
-            }, this.$element.offset())
+                    width: el.offsetWidth
+                    , height: el.offsetHeight
+                }, this.$element.offset())
         }
 
         , getTitle: function ()
@@ -2470,8 +2470,8 @@
 
         affix = this.unpin != null && (scrollTop + this.unpin <= position.top) ?
             false : offsetBottom != null && (position.top + this.$element.height() >= scrollHeight - offsetBottom) ?
-            'bottom' : offsetTop != null && scrollTop <= offsetTop ?
-            'top' : false
+                'bottom' : offsetTop != null && scrollTop <= offsetTop ?
+                    'top' : false
 
         if (this.affixed === affix) return
 

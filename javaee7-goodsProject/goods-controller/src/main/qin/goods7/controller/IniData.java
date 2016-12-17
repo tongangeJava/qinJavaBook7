@@ -28,11 +28,11 @@ public class IniData implements JavaEE7BaseSupport
 
     private
     Session session =
-            (
-                    (SessionFactory) new
-                            ClassPathXmlApplicationContext("applicationContext.xml")
-                            .getBean("sessionFactory")
-            ).openSession();
+              (
+                        (SessionFactory) new
+                                  ClassPathXmlApplicationContext("applicationContext.xml")
+                                  .getBean("sessionFactory")
+              ).openSession();
 
     @RequestMapping(value = "/doMainView")
     /** 恢复所有数据 */

@@ -244,7 +244,9 @@ public class Save4 extends SpringTest
     }
     //endregion
 
-    @Test public void all() {
+    @Test
+    public void all()
+    {
         saveChildren0();
         saveChildren1();
         saveChildren2();

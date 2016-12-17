@@ -29,7 +29,7 @@ public class Save5 extends SpringTest
         GoodsType parent = (GoodsType) session.createQuery("from GoodsType where goodsTypeName = '女装'").list().get(0);
         String[] children =
                   {
-                            "女装3免1", "毛呢大衣", "羽绒服", "连衣裙", "针织衫", "卫衣", "牛仔裤", "风衣", "T恤", "衬衫", "短外套", "打底衫", "打底裤", "棉服", "皮草", "羊毛衫", "羊绒衫", "真皮皮衣", "小西装", "休闲裤", "大码女装", "中老年女装", "设计师/潮牌", "半身裙", "仿皮皮衣", "马甲", "正装裤", "加绒裤", "婚纱", "礼服", "旗袍/唐装", "雪纺衫", "吊带/背心", "短裤"
+                            "女装3免1_", "毛呢大衣", "羽绒服", "连衣裙", "针织衫", "卫衣", "牛仔裤", "风衣", "T恤", "衬衫", "短外套", "打底衫", "打底裤", "棉服", "皮草", "羊毛衫", "羊绒衫", "真皮皮衣", "小西装", "休闲裤", "大码女装", "中老年女装", "设计师/潮牌", "半身裙", "仿皮皮衣", "马甲", "正装裤", "加绒裤", "婚纱", "礼服", "旗袍/唐装", "雪纺衫", "吊带/背心", "短裤"
                   };
         for (int i = 0; i < children.length; i++)
         {
@@ -222,43 +222,13 @@ public class Save5 extends SpringTest
     @Test
     public void all()
     {
-        boolean flag = true;
+        saveChildren0();
+        saveChildren1();
+        saveChildren2();
+        saveChildren3();
+        saveChildren4();
 
-        try
-        {
-            saveChildren0();
-            saveChildren1();
-            saveChildren2();
-            saveChildren3();
-            saveChildren4();
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-            flag = false;
-        }
-        finally
-        {
-            if (flag)
-            {
-                transaction.commit();
-            }
-            else
-            {
-                System.out.println("failed");
-            }
-        }
-                /*
-                saveChildren5();
-                saveChildren6();
-                saveChildren7();
-                saveChildren8();
-                saveChildren9();
-                saveChildren10();
-                saveChildren11();
-                saveChildren12();
-                */
-
+        transaction.commit();
 
     }
 }

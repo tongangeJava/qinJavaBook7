@@ -100,10 +100,10 @@ public class GoodsType implements SuperEntity7<Long>
 
     @OneToMany(targetEntity = Goods.class)
     @JoinTable
-            (
-                    name = "goodsType_goodsSet7",
-                    joinColumns = @JoinColumn(name = "joinColumn_goodsSet", foreignKey = @ForeignKey(name = "fk_goodsSet"))
-            )
+              (
+                        name = "goodsType_goodsSet7",
+                        joinColumns = @JoinColumn(name = "joinColumn_goodsSet", foreignKey = @ForeignKey(name = "fk_goodsSet"))
+              )
     public Set<Goods> getGoodsTypeSet()
     {
         return goodsTypeSet;
@@ -123,10 +123,10 @@ public class GoodsType implements SuperEntity7<Long>
 
     @OneToMany(targetEntity = GoodsType.class, cascade = CascadeType.REMOVE)
     @JoinTable
-            (
-                    name = "goodstype_childrenSet7",
-                    joinColumns = @JoinColumn(name = "joinColumn_children", foreignKey = @ForeignKey(name = "fk_children"))
-            )
+              (
+                        name = "goodstype_childrenSet7",
+                        joinColumns = @JoinColumn(name = "joinColumn_children", foreignKey = @ForeignKey(name = "fk_children"))
+              )
     public Set<GoodsType> getGoodsType_childrenSet()
     {
         return goodsType_childrenSet;

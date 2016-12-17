@@ -40,5 +40,6 @@
     <orderEntry type="module" module-name="goods-service" />
     <orderEntry type="module" module-name="java7-review" />
     <orderEntry type="module" module-name="qinJavaBook7" />
+    <orderEntry type="library" scope="PROVIDED" name="猫7" level="application_server_libraries" />
   </component>
 </module>

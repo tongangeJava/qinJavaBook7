@@ -16,8 +16,8 @@ import qin.javaee7.core.hibernate.dao.impl.JavaEE7DAOSupportImpl;
 @Repository(value = "goods_userDAO7")
 @SuppressWarnings("all")
 public class UserDAOImpl
-        extends JavaEE7DAOSupportImpl<User, Integer>
-        implements UserDAO
+          extends JavaEE7DAOSupportImpl<User, Integer>
+          implements UserDAO
 {
     private static final long serialVersionUID = -6049010728238623624L;
 
@@ -37,20 +37,20 @@ public class UserDAOImpl
 
         //查询用户
         result.setSearchList
-                (
-                        getSessionFactory()
-                                .openSession()
-                                .createQuery
-                                        (
-                                                new StringBuilder()
-                                                        .append("from User where loginName='")
-                                                        .append(user.getLoginName())
-                                                        .append("' and password='")
-                                                        .append(user.getPassword())
-                                                        .append("'").toString()
-                                        )
-                                .list()
-                );
+                  (
+                            getSessionFactory()
+                                      .openSession()
+                                      .createQuery
+                                                (
+                                                          new StringBuilder()
+                                                                    .append("from User where loginName='")
+                                                                    .append(user.getLoginName())
+                                                                    .append("' and password='")
+                                                                    .append(user.getPassword())
+                                                                    .append("'").toString()
+                                                )
+                                      .list()
+                  );
         if (result.getSearchList().size() > 0)
         {
             //登录成功
