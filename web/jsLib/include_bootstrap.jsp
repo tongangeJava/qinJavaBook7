@@ -13,4 +13,9 @@
     {
         font-family: 微软雅黑;
     }
+
+    #_body
+    {
+        font-family: 微软雅黑;
+    }
 </style>
